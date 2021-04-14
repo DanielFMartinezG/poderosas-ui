@@ -1,0 +1,94 @@
+.about-us-slider-section .about-us-title {
+  margin: 20px;
+  font-family: "Amatic SC", cursive;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0;
+  color: #e34462;
+}
+.about-us-slider-section .about-us-slider-container .bttn-slide-left {
+  display: none;
+}
+.about-us-slider-section .about-us-slider-container .about-us-slide-box {
+  margin: auto;
+  width: 90%;
+  overflow: scroll;
+}
+.about-us-slider-section .about-us-slider-container .about-us-slide-box::-webkit-scrollbar {
+  display: none;
+}
+.about-us-slider-section .about-us-slider-container .about-us-slide-box .about-us-slide {
+  white-space: nowrap;
+}
+.about-us-slider-section .about-us-slider-container .about-us-slide-box .about-us-slide .about-us-img-box {
+  margin: 20px;
+  display: inline-block;
+  width: 150px;
+  height: 170px;
+}
+.about-us-slider-section .about-us-slider-container .about-us-slide-box .about-us-slide .about-us-img-box .about-us-slide-img {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 10px 13px #bdd7fd;
+  border-radius: 25px;
+}
+.about-us-slider-section .about-us-slider-container .bttn-slide-right {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .about-us-slider-section {
+    margin: auto;
+    max-width: 1440px;
+  }
+  .about-us-slider-section .about-us-title {
+    margin: 20px;
+    font-family: "Amatic SC", cursive;
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0;
+    color: #e34462;
+  }
+  .about-us-slider-section .about-us-slider-container {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1034px;
+  }
+  .about-us-slider-section .about-us-slider-container .bttn-slide-left {
+    display: block;
+    cursor: pointer;
+  }
+  .about-us-slider-section .about-us-slider-container .about-us-slide-box {
+    width: 100%;
+    overflow: hidden;
+  }
+  .about-us-slider-section .about-us-slider-container .about-us-slide-box .about-us-slide {
+    margin: auto;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 390px;
+  }
+  .about-us-slider-section .about-us-slider-container .about-us-slide-box .about-us-slide .about-us-img-box {
+    width: 110px;
+    height: 130px;
+  }
+  .about-us-slider-section .about-us-slider-container .about-us-slide-box .about-us-slide .about-us-img-box .about-us-slide-img {
+    object-fit: cover;
+  }
+  .about-us-slider-section .about-us-slider-container .about-us-slide-box .about-us-slide .about-us-img-box.about-us-img-selected {
+    width: 300px;
+    height: 350px;
+    transition: 0.8s;
+  }
+  .about-us-slider-section .about-us-slider-container .bttn-slide-right {
+    display: block;
+    cursor: pointer;
+  }
+}

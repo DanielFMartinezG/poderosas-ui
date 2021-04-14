@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap");
+
+.section-info-org {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+}
+.section-info-org .button-info-org {
+  width: 30%;
+  max-width: 135px;
+  background-color: #FFC72C;
+  color: #FFFFFF;
+  font-family: "Amatic SC", cursive;
+  font-weight: 700;
+  font-size: 35px;
+  border: none;
+  border-radius: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  text-align: center;
+  outline: none;
+}
+.section-info-org .button-info-org:last-of-type {
+  margin-right: 0;
+}
+.section-info-org .button-info-org.activeButton {
+  background-color: #407EC9;
+}
+.section-info-org .container-info-org {
+  width: 100%;
+  max-width: 440px;
+  padding: 5px;
+  margin: 20px auto;
+}
+.section-info-org .container-info-org .box-img-inicial-info-org {
+  width: 100%;
+  height: 300px;
+}
+.section-info-org .container-info-org .box-img-inicial-info-org .img-inicial-info-org {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+  border-radius: 20px;
+}
+.section-info-org .container-info-org .box-img-inicial-info-org.desactive-info-org {
+  display: none;
+}
+.section-info-org .container-info-org .div-info-org {
+  display: none;
+  width: 100%;
+  flex-flow: row-reverse wrap;
+  justify-content: center;
+}
+.section-info-org .container-info-org .div-info-org .box-img-info-org {
+  width: 100%;
+  height: 128px;
+  transition: all 5s ease-in-out 2s;
+}
+.section-info-org .container-info-org .div-info-org .box-img-info-org .img-info-org {
+  width: 100%;
+  height: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: bottom;
+  border-radius: 20px;
+  margin-top: 16px;
+}
+.section-info-org .container-info-org .div-info-org .box-text-info-org .title-info-org {
+  font-family: "Amatic SC", cursive;
+  font-size: 25px;
+  font-weight: 700;
+  color: #DF4661;
+  margin-top: 10px;
+}
+.section-info-org .container-info-org .div-info-org .box-text-info-org .text-info-org {
+  font-family: "Karla", sans-serif;
+  font-size: 15px;
+  color: #407EC9;
+  text-align: justify;
+  margin-top: 8px;
+}
+.section-info-org .container-info-org .div-info-org .box-text-info-org ul {
+  list-style: none;
+}
+.section-info-org .container-info-org .div-info-org .box-text-info-org ul li {
+  font-family: "Karla", sans-serif;
+  font-size: 15px;
+  color: #407EC9;
+  display: inline-block;
+  font-size: 20px;
+  width: 45%;
+  padding-right: 10px;
+}
+.section-info-org .container-info-org .container-mision.active-info-org {
+  display: flex;
+}
+.section-info-org .container-info-org .container-vision.active-info-org {
+  display: flex;
+}
+.section-info-org .container-info-org .container-valores.active-info-org {
+  display: flex;
+}
+
+@media (min-width: 750px) {
+  .section-info-org {
+    margin-top: 30px;
+  }
+  .section-info-org .button-info-org {
+    margin-right: 30px;
+  }
+  .section-info-org .container-info-org {
+    width: 100%;
+    max-width: none;
+    padding: 10px;
+  }
+  .section-info-org .container-info-org .box-img-inicial-info-org {
+    height: 450px;
+  }
+  .section-info-org .container-info-org .div-info-org {
+    justify-content: space-between;
+  }
+  .section-info-org .container-info-org .div-info-org .box-img-info-org {
+    width: 50%;
+    height: auto;
+  }
+  .section-info-org .container-info-org .div-info-org .box-text-info-org {
+    width: 50%;
+    padding-right: 8px;
+    align-content: center;
+  }
+  .section-info-org .container-info-org .div-info-org .box-text-info-org .title-info-org {
+    font-size: 35px;
+  }
+  .section-info-org .container-info-org .div-info-org .box-text-info-org .text-info-org {
+    font-size: 22px;
+  }
+  .section-info-org .container-info-org .div-info-org .box-text-info-org ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .section-info-org .container-info-org .div-info-org .box-text-info-org ul li {
+    width: 100%;
+    font-size: 30px;
+    margin-bottom: 5px;
+  }
+}

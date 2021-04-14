@@ -1,0 +1,38 @@
+footer {
+  width: 100%;
+  height: 80px;
+  background-color: #e34462;
+  display: flex;
+  justify-content: space-between;
+  padding: 7%;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+}
+footer ul {
+  display: flex;
+}
+footer ul li {
+  list-style: none;
+}
+footer ul li a {
+  margin-left: 10px;
+  color: white;
+}
+
+@media screen and (min-width: 1200px) {
+  footer {
+    padding: 2% 4% 0% 4%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  footer ul {
+    justify-content: unset;
+  }
+  footer li i {
+    margin-left: 20px;
+    color: white;
+  }
+}
