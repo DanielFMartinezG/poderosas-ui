@@ -1,7 +1,15 @@
-# Getting Started with Create React App
+# Poderosas UI
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Team 
+* Daniel Fernando Martínez
+* Jeferson Giraldo
+* Ana María Zapata
+* Jose Miguel Ayala
+* Alexander Nanclares
+* Andrey Fernandez
+* Sebastian Peréz
 ## Available Scripts
 
 In the project directory, you can run:
