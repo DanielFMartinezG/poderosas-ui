@@ -16,19 +16,33 @@
   width: 90%;
   overflow: scroll;
 }
-.about-us-slider-section .about-us-slider-container .about-us-slide-box::-webkit-scrollbar {
+.about-us-slider-section
+  .about-us-slider-container
+  .about-us-slide-box::-webkit-scrollbar {
   display: none;
 }
-.about-us-slider-section .about-us-slider-container .about-us-slide-box .about-us-slide {
+.about-us-slider-section
+  .about-us-slider-container
+  .about-us-slide-box
+  .about-us-slide {
   white-space: nowrap;
 }
-.about-us-slider-section .about-us-slider-container .about-us-slide-box .about-us-slide .about-us-img-box {
+.about-us-slider-section
+  .about-us-slider-container
+  .about-us-slide-box
+  .about-us-slide
+  .about-us-img-box {
   margin: 20px;
   display: inline-block;
   width: 150px;
   height: 170px;
 }
-.about-us-slider-section .about-us-slider-container .about-us-slide-box .about-us-slide .about-us-img-box .about-us-slide-img {
+.about-us-slider-section
+  .about-us-slider-container
+  .about-us-slide-box
+  .about-us-slide
+  .about-us-img-box
+  .about-us-slide-img {
   width: 100%;
   height: 100%;
   box-shadow: 0px 0px 10px 13px #bdd7fd;
@@ -68,21 +82,37 @@
     width: 100%;
     overflow: hidden;
   }
-  .about-us-slider-section .about-us-slider-container .about-us-slide-box .about-us-slide {
+  .about-us-slider-section
+    .about-us-slider-container
+    .about-us-slide-box
+    .about-us-slide {
     margin: auto;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     height: 390px;
   }
-  .about-us-slider-section .about-us-slider-container .about-us-slide-box .about-us-slide .about-us-img-box {
+  .about-us-slider-section
+    .about-us-slider-container
+    .about-us-slide-box
+    .about-us-slide
+    .about-us-img-box {
     width: 110px;
     height: 130px;
   }
-  .about-us-slider-section .about-us-slider-container .about-us-slide-box .about-us-slide .about-us-img-box .about-us-slide-img {
+  .about-us-slider-section
+    .about-us-slider-container
+    .about-us-slide-box
+    .about-us-slide
+    .about-us-img-box
+    .about-us-slide-img {
     object-fit: cover;
   }
-  .about-us-slider-section .about-us-slider-container .about-us-slide-box .about-us-slide .about-us-img-box.about-us-img-selected {
+  .about-us-slider-section
+    .about-us-slider-container
+    .about-us-slide-box
+    .about-us-slide
+    .about-us-img-box.about-us-img-selected {
     width: 300px;
     height: 350px;
     transition: 0.8s;
