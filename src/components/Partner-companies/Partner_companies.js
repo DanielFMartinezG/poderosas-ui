@@ -5,10 +5,10 @@ import Companie_img from './Companie_img';
 const Parner_companies = () =>{
   const companies_imgs = companies_array();
   return(
-    <section className="empresasAliadas__section">
-      <h2 className="empresasAliadas_title">Empresas Aliadas</h2>
-      <div className="empresasAliadas">
-        <div className="empresasAliadas__container">
+    <section className="partner-companies-section">
+      <h2 className="partner-companies-title">Empresas Aliadas</h2>
+      <div className="partner-companies">
+        <div className="partner-companies-container">
           {companies_imgs.map((companie)=>(
             <Companie_img 
               url_img = {companie.img_src}
