@@ -9,8 +9,8 @@
 .section-info-org .button-info-org {
   width: 30%;
   max-width: 135px;
-  background-color: #FFC72C;
-  color: #FFFFFF;
+  background-color: #ffc72c;
+  color: #ffffff;
   font-family: "Amatic SC", cursive;
   font-weight: 700;
   font-size: 35px;
@@ -25,7 +25,7 @@
   margin-right: 0;
 }
 .section-info-org .button-info-org.activeButton {
-  background-color: #407EC9;
+  background-color: #407ec9;
 }
 .section-info-org .container-info-org {
   width: 100%;
@@ -37,14 +37,19 @@
   width: 100%;
   height: 300px;
 }
-.section-info-org .container-info-org .box-img-inicial-info-org .img-inicial-info-org {
+.section-info-org
+  .container-info-org
+  .box-img-inicial-info-org
+  .img-inicial-info-org {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: bottom;
   border-radius: 20px;
 }
-.section-info-org .container-info-org .box-img-inicial-info-org.desactive-info-org {
+.section-info-org
+  .container-info-org
+  .box-img-inicial-info-org.desactive-info-org {
   display: none;
 }
 .section-info-org .container-info-org .div-info-org {
@@ -58,7 +63,11 @@
   height: 128px;
   transition: all 5s ease-in-out 2s;
 }
-.section-info-org .container-info-org .div-info-org .box-img-info-org .img-info-org {
+.section-info-org
+  .container-info-org
+  .div-info-org
+  .box-img-info-org
+  .img-info-org {
   width: 100%;
   height: 100%;
   max-height: 300px;
@@ -67,17 +76,25 @@
   border-radius: 20px;
   margin-top: 16px;
 }
-.section-info-org .container-info-org .div-info-org .box-text-info-org .title-info-org {
+.section-info-org
+  .container-info-org
+  .div-info-org
+  .box-text-info-org
+  .title-info-org {
   font-family: "Amatic SC", cursive;
   font-size: 25px;
   font-weight: 700;
-  color: #DF4661;
+  color: #df4661;
   margin-top: 10px;
 }
-.section-info-org .container-info-org .div-info-org .box-text-info-org .text-info-org {
+.section-info-org
+  .container-info-org
+  .div-info-org
+  .box-text-info-org
+  .text-info-org {
   font-family: "Karla", sans-serif;
   font-size: 15px;
-  color: #407EC9;
+  color: #407ec9;
   text-align: justify;
   margin-top: 8px;
 }
@@ -87,7 +104,7 @@
 .section-info-org .container-info-org .div-info-org .box-text-info-org ul li {
   font-family: "Karla", sans-serif;
   font-size: 15px;
-  color: #407EC9;
+  color: #407ec9;
   display: inline-block;
   font-size: 20px;
   width: 45%;
@@ -130,10 +147,18 @@
     padding-right: 8px;
     align-content: center;
   }
-  .section-info-org .container-info-org .div-info-org .box-text-info-org .title-info-org {
+  .section-info-org
+    .container-info-org
+    .div-info-org
+    .box-text-info-org
+    .title-info-org {
     font-size: 35px;
   }
-  .section-info-org .container-info-org .div-info-org .box-text-info-org .text-info-org {
+  .section-info-org
+    .container-info-org
+    .div-info-org
+    .box-text-info-org
+    .text-info-org {
     font-size: 22px;
   }
   .section-info-org .container-info-org .div-info-org .box-text-info-org ul {

@@ -3,11 +3,15 @@ import '../../styles/news_slider.css';
 import News_img from './News_img';
 import get_news from '../../scripts/news-slider/get_news'
 import slide_news from '../../scripts/news-slider/slide_news'
+
+
 let News_slider = (props) =>{
   let news_array = get_news();
   useEffect(() => {
     slide_news(news_array);
   });
+
+
   return(
     <section className="news-section" id="news-section">
       <h2 className="news_section_title">Poderosas en los medios</h2>
