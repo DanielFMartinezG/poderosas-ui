@@ -34,12 +34,12 @@ const Origin = () => {
 const Info = ({ title, parragraph, background_color, color, font_color }) => {
   return (
     <div
-      // data-aos="fade-up"
+      data-aos="fade-up"
       className="text_properties"
       style={{ background: background_color, color: color }}
     >
       <h4
-        // data-aos="fade-up"
+        data-aos="fade-up"
         className="text_title"
         style={{ color: font_color }}
       >
