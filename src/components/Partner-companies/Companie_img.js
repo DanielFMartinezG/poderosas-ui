@@ -1,8 +1,8 @@
 import React from 'react';
 let Companie_img =(props) =>{
   return(
-    <div className="empresasAliadas__logo">
-      <img className="empresasAliadas__img" 
+    <div className="partner-companies-logo">
+      <img className="partner-companies-img" 
         src={props.url_img} 
         alt="logo Sara y Flora"
       />

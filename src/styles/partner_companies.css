@@ -1,7 +1,13 @@
-.empresasAliadas__section {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.partner-companies-section {
   background-color: #EEE7E3;
 }
-.empresasAliadas_title {
+.partner-companies-title {
   font-family: "Amatic SC", cursive;
   font-size: 35px;
   line-height: 35px;
@@ -11,11 +17,12 @@
   color: #e34462;
   white-space: normal;
 }
-.empresasAliadas__section .empresasAliadas {
+.partner-companies-section .partner-companies {
   display: inline-block;
   width: 100%;
 }
-.empresasAliadas__section .empresasAliadas .empresasAliadas__container {
+
+.partner-companies-section .partner-companies .partner-companies-container {
   text-align: center;
   align-items: center;
   width: auto;
@@ -24,19 +31,60 @@
   margin: 20px;
   background-color: #EEE7E3;
 }
-.empresasAliadas__section .empresasAliadas .empresasAliadas__container::-webkit-scrollbar {
+
+.partner-companies-section .partner-companies .partner-companies-container::-webkit-scrollbar {
   display: none;
 }
-.empresasAliadas__section .empresasAliadas .empresasAliadas__container .empresasAliadas__logo {
+
+.partner-companies-section .partner-companies .partner-companies-container .partner-companies-logo {
   display: inline-block;
   width: 100px;
   height: 100px;
   margin: 20px 8px;
 }
-.empresasAliadas__section .empresasAliadas .empresasAliadas__container .empresasAliadas__logo .empresasAliadas__img {
-  width: 100%;
-  height: 100%;
+
+.partner-companies-section .partner-companies .partner-companies-container .partner-companies-logo .partner-companies-img {
+  width: 100px;
+  height: 100px;
   object-fit: cover;
   border-radius: 20px;
   box-shadow: 5px 3px 3px #BDD7FD;
+}
+
+@media screen and (min-width: 700px) {
+  .partner-companies-section .partner-companies .partner-companies-container::-webkit-scrollbar {
+    display: none;
+  }
+  .partner-companies-section .partner-companies .partner-companies-container .partner-companies-logo {
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    margin: 20px 8px;
+  }
+  .partner-companies-section .partner-companies .partner-companies-container .partner-companies-logo .partner-companies-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 5px 3px 3px #BDD7FD;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .partner-companies-section .partner-companies .partner-companies-container::-webkit-scrollbar {
+    display: none;
+  }
+  .partner-companies-section .partner-companies .partner-companies-container .partner-companies-logo {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    margin: 20px 8px;
+  }
+  .partner-companies-section .partner-companies .partner-companies-container .partner-companies-logo .partner-companies-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 5px 3px 3px #BDD7FD;
+  }
 }
