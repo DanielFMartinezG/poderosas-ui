@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap");
+
+.section-origin {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+}
+
+.section-origin .origin_section_title {
+  margin: 20px;
+  font-family: "Amatic SC", cursive;
+  font-size: 35px;
+  line-height: 35px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0;
+  color: #e34462;
+}
+
+.section-origin .text_container {
+  padding: 1px;
+}
+
+.section-origin .text_container .text_properties {
+  margin-bottom: 180px;
+  border-radius: 15px;
+  padding: 10px;
+  position: relative;
+  padding: 10px 10px 10px 10px;
+}
+
+.section-origin .text_container .text_properties .text_paragraph {
+  text-align: justify;
+  padding: 10px 15px 30px 15px;
+  font-size: 15px;
+  font-family: "Karla", sans-serif;
+  line-height: 20px;
+}
+
+.section-origin .text_container .text_properties .text_title {
+  font-size: 30px;
+  padding: 10px 0px 0px 0px;
+}
+
+.section-origin .text_container .text_properties .img {
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+}
+
+.section-origin .text_container .text_properties .img_container {
+  left: 20%;
+  right: 20%;
+  bottom: -140px;
+  position: absolute;
+}
+
+@media (min-width: 750px) {
+  .section-origin .text_container {
+    padding: 1px;
+    max-width: 1100px;
+  }
+
+  .section-origin .text_container .text_properties .text_paragraph {
+    padding: 10px 70px 21px 70px;
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .section-origin .text_container .text_properties .img_container {
+    left: 37%;
+    right: 37%;
+    bottom: -250px;
+  }
+
+  .section-origin .text_container .text_properties .img {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+  }
+
+  .section-origin .text_container .text_properties {
+    margin-bottom: 280px;
+  }
+}
