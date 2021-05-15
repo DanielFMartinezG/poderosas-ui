@@ -11,7 +11,6 @@ let News_slider = (props) =>{
     slide_news(news_array);
   });
 
-
   return(
     <section className="news-section" id="news-section">
       <h2 className="news_section_title">Poderosas en los medios</h2>
