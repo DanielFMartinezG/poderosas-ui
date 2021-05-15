@@ -9,7 +9,7 @@ const About_us = () => {
     <React.Fragment>
       <AboutUs_Slider />
       <Info_org />
-      {/* <Origin /> */}
+      <Origin />
       <Staff />
     </React.Fragment>
   );
