@@ -30,9 +30,20 @@ const Map =()=>{
         event_descritpion:events_array[index].event[0].event_descritpion
       }
       setEvent(dpto_event);
-      const dist_x = evt.clientX - event_card.offsetWidth/2;
-      const dist_y = (window.screen.width < 1024)? (evt.nativeEvent.layerY):(evt.nativeEvent.layerY- event_card.offsetHeight -15);
-      setEventCard({visibility: "visible", transform: `translate(${dist_x}px, ${dist_y}px)`})
+
+      if(window.screen.width < 768){
+
+        const dist_x = window.screen.width*0.5 -  event_card.offsetWidth/2;
+        setEventCard({visibility: "visible", transform: `translate(${dist_x}px)`})
+
+      }else{
+
+        const dist_x = evt.clientX - event_card.offsetWidth/2;
+        const dist_y = (evt.nativeEvent.layerY- event_card.offsetHeight -15);
+        setEventCard({visibility: "visible", transform: `translate(${dist_x}px, ${dist_y}px)`})
+
+      }
+      
     }
   }
   const changEventInfo = (evt)=>{
