@@ -14,7 +14,7 @@
   position: relative;
 }
 
-.section-origin .origin_section_title {
+.section-origin .origin-section-title {
   margin: 20px;
   font-family: "Amatic SC", cursive;
   font-size: 35px;
@@ -25,11 +25,11 @@
   color: #e34462;
 }
 
-.section-origin .text_container {
+.section-origin .text-container {
   padding: 1px;
 }
 
-.section-origin .text_container .text_properties {
+.section-origin .text-container .text-properties {
   margin-bottom: 180px;
   border-radius: 15px;
   padding: 10px;
@@ -37,7 +37,7 @@
   padding: 10px 10px 10px 10px;
 }
 
-.section-origin .text_container .text_properties .text_paragraph {
+.section-origin .text-container .text-properties .text-paragraph {
   text-align: justify;
   padding: 10px 15px 30px 15px;
   font-size: 15px;
@@ -45,49 +45,76 @@
   line-height: 20px;
 }
 
-.section-origin .text_container .text_properties .text_title {
+.video-container{
+  margin: 25px 0 ;
+}
+.youtube-video{
+  display: block;
+  margin: auto;
+  width: 250px;
+  height: 260px;
+  border-radius: 25px; 
+  box-shadow: 0px 0px 0px 5px #e34462;
+}
+
+.section-origin .text-container .text-properties .text-title {
   font-size: 30px;
   padding: 10px 0px 0px 0px;
 }
 
-.section-origin .text_container .text_properties .img {
+.section-origin .text-container .text-properties .img {
   height: 180px;
   width: 180px;
   border-radius: 50%;
 }
 
-.section-origin .text_container .text_properties .img_container {
+.section-origin .text-container .text-properties .img-container {
   left: 20%;
   right: 20%;
   bottom: -140px;
   position: absolute;
 }
-
+.text-container{
+  max-width: 375px;
+}
 @media (min-width: 750px) {
-  .section-origin .text_container {
+  .section-origin .text-container {
     padding: 1px;
-    max-width: 1100px;
+    max-width: 550px;
   }
 
-  .section-origin .text_container .text_properties .text_paragraph {
+  .section-origin .text-container .text-properties .text-paragraph {
     padding: 10px 70px 21px 70px;
     font-size: 22px;
     line-height: 30px;
   }
 
-  .section-origin .text_container .text_properties .img_container {
+  .section-origin .text-container .text-properties .img-container {
     left: 37%;
     right: 37%;
     bottom: -250px;
   }
 
-  .section-origin .text_container .text_properties .img {
+  .section-origin .text-container .text-properties .img {
     height: 300px;
     width: 300px;
     border-radius: 50%;
   }
 
-  .section-origin .text_container .text_properties {
+  .section-origin .text-container .text-properties {
     margin-bottom: 280px;
+  }
+  .youtube-video{
+  width: 380px;
+  height: 400px;
+  }
+}
+@media (min-width: 1024px) {
+  .section-origin .text-container {
+    max-width: 1100px;
+  }
+  .youtube-video{
+  width: 580px;
+  height: 335px;
   }
 }
