@@ -14,9 +14,11 @@ ul{
   list-style-type: none;
 }
 .section-info-poderosas {
+  margin: auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  max-width: 1440px;
 }
 .section-info-poderosas .cont-info-poderosas {
   width: 99%;

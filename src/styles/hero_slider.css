@@ -8,55 +8,56 @@
 width: 100%;
 }
 .hero-section .hero-slider-container .hero-slider {
-white-space: nowrap;
-overflow: hidden;
+    white-space: nowrap;
+    overflow: hidden;
 }
 .hero-section .hero-slider-container .hero-slider .hero-slider-img-box {
-width: 100%;
-height: 290px;
-display: inline-block;
-transition: 1s;
+    width: 100%;
+    height: 290px;
+    display: inline-block;
+    transition: 1s;
 }
 .hero-section .hero-slider-container .hero-slider .hero-slider-img-box .hero-img {
-display: block;
-margin: 20px auto;
-width: 200px;
-height: 250px;
-box-shadow: 0px 0px 10px 13px #bdd7fd;
-border-radius: 25px;
+    display: block;
+    margin: 20px auto;
+    width: 200px;
+    height: 250px;
+    box-shadow: 0px 0px 10px 13px #bdd7fd;
+    border-radius: 25px;
+    z-index: 0;
 }
 .hero-section .hero-description-box {
-margin: 10px auto 20px auto;
-text-align: center;
+    margin: 10px auto 20px auto;
+    text-align: center;
 }
 .hero-section .hero-description-box .hero-text {
-margin: auto;
-margin-bottom: 20px;
-text-align: left;
-width: 95%;
-font-family: "Amatic SC", cursive;
-font-size: 23px;
-line-height: 25px;
-font-weight: 400;
-text-align: center;
-letter-spacing: 0;
-color: #e34462;
-transform: 1s;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: left;
+    width: 95%;
+    font-family: "Amatic SC", cursive;
+    font-size: 23px;
+    line-height: 25px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0;
+    color: #e34462;
+    transform: 1s;
 }
 .hero-section .hero-position-box {
-display: flex;
-justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 .hero-section .hero-position-box .slide-postion {
-margin-right: 10px;
-width: 15px;
-height: 15px;
-border-radius: 50%;
-background-color: #bdd7fd;
-cursor: pointer;
+    margin-right: 10px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #bdd7fd;
+    cursor: pointer;
 }
 .hero-section .hero-position-box .position_selected {
-background-color: #627ae9;
+    background-color: #627ae9;
 }
 
 @media (min-width: 768px) {
