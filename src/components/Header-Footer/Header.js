@@ -37,7 +37,7 @@ const Header = () => {
           <span></span>
           <span></span>
           <span></span>
-          <ul>
+          <ul className='menu-ul'>
             <li onClick={closeMenu}><Link to='/poderosas/home'>INICIO</Link></li>
             <hr color="#FFFFFF" />
             <li onClick={closeMenu}><a href="#">PREGUNTAS FRECUENTES</a></li>

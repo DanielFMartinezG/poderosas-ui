@@ -7,16 +7,7 @@
 .partner-companies-section {
   background-color: #EEE7E3;
 }
-.partner-companies-title {
-  font-family: "Amatic SC", cursive;
-  font-size: 35px;
-  line-height: 35px;
-  font-weight: 400;
-  text-align: center;
-  letter-spacing: 0;
-  color: #e34462;
-  white-space: normal;
-}
+
 .partner-companies-section .partner-companies {
   display: inline-block;
   width: 100%;

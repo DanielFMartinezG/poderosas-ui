@@ -67,9 +67,8 @@ header nav .menu ul {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin-top: 6%;
   position: absolute;
-  top: 45px;
+  top: 70px;
   right: 0;
   overflow: hidden;
   list-style: none;
@@ -100,7 +99,7 @@ header nav .menu ul li a {
   position: relative;
   text-decoration: none;
   color: white;
-  padding: 20px 0px 5% 0px;
+  padding: 20px 0;
   line-height: 28px;
   display: flex;
 }
@@ -108,7 +107,6 @@ header nav .menu ul li a:hover {
   color: #fff;
 }
 header nav .menu input[type=checkbox]:checked ~ ul {
-  margin-top: 6%;
   height: 100%;
   transition: height 0.5s ease-in-out;
   -moz-transition: height 0.5s ease-in-out;
@@ -153,7 +151,7 @@ header nav .menu input:checked ~ span:nth-last-child(2) {
   transform: rotate(-45deg) translate(1px, 0px);
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1024px) {
   header {
     flex-flow: row wrap;
     height: 100px;

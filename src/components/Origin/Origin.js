@@ -12,7 +12,7 @@ const Origin = () => {
 
   return (
     <section className="section-origin">
-      <h2 className="we-are-poderosas-title">POR QUÉ Y ORIGEN</h2>
+      <h2 className="main-title">POR QUÉ Y ORIGEN</h2>
       <div className="text-container">
         {info_origin.map((info) => (
           <Info

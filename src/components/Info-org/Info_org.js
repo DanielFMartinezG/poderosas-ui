@@ -10,23 +10,23 @@ import show_values from "../../scripts/info-org/show_values";
 const Info_org = () => {
   return (
     <section className="section-info-org">
-      <h2 className='we-are-poderosas-title'>Poderosas</h2>
+      <h2 className='main-title'>Poderosas</h2>
       <button
-        className="button-info-org"
+        className="button-template button-org"
         id="button-mision"
         onClick={show_mision}
       >
         Misión
       </button>
       <button
-        className="button-info-org"
+        className="button-template button-org"
         id="button-vision"
         onClick={show_vision}
       >
         visión
       </button>
       <button
-        className="button-info-org"
+        className="button-template button-org"
         id="button-valores"
         onClick={show_values}
       >
@@ -69,7 +69,7 @@ const Info_org = () => {
           </figure>
           <div className="box-text-info-org">
             <h3 className="title-info-org">Nuestros valores</h3>
-            <ul>
+            <ul className='valores-lista'>
               <li>Unión</li>
               <li>Transparencia</li>
               <li>Empatia</li>

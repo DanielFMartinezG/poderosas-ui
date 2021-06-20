@@ -14,7 +14,7 @@ let News_slider = (props) =>{
 
   return(
     <section className="news-section" id="news-section">
-      <h2 className="news_section_title">Poderosas en los medios</h2>
+      <h2 className="main-title">Poderosas en los medios</h2>
       <div className="news-slider-container">
         <div className="news-slider">
           {

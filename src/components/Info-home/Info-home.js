@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import '../../styles/info_home.css';
-import pod_uraba from '../../assets/img-logos/poderosas-uraba.jpg';
 import poderosas_team from '../../assets/img-logos/equipo-poderoso.png';
 import first_testimony from '../../assets/img-logos/testimonio1.jpeg';
 import second_testimony from '../../assets/img-logos/testimonio2.jpeg';
@@ -67,12 +66,12 @@ const Info_poderosas = () => {
   });
   return (
     <React.Fragment>
-      <h2 className='we-are-poderosas-title'>Somos poderosas</h2>
+      <h2 className='main-title'>Somos poderosas</h2>
       <section className="section-info-poderosas">
         <div className="cont-info-poderosas cont-wh-poderosas">
-          <button className="button-poderosas button-who-poderosas" id="button-who-poderosas" onClick={btnWhoPoderosas}>¿Quienes <br></br> Somos?</button>
-          <button className="button-poderosas button-who-poderosas" id="button-what-poderosas" onClick={btnWhatPoderosas}>¿Qué es lo que Hacemos?</button>
-          <button className="button-poderosas button-who-poderosas" id="button-why-poderosas" onClick={btnWhyPoderosas}>¿Por qué lo Hacemos?</button>
+          <button className="button-template button-who-poderosas" id="button-who-poderosas" onClick={btnWhoPoderosas}>¿Quienes <br></br> Somos?</button>
+          <button className="button-template button-who-poderosas" id="button-what-poderosas" onClick={btnWhatPoderosas}>¿Qué es lo que Hacemos?</button>
+          <button className="button-template button-who-poderosas" id="button-why-poderosas" onClick={btnWhyPoderosas}>¿Por qué lo Hacemos?</button>
           <div className="box-wh-poderosas" ref={whBox}>
             <h3 className="subtitle-wh-poderosas">{whState.title}</h3>
             <div className="content-wh-poderosas">{whState.content}</div>
@@ -82,9 +81,9 @@ const Info_poderosas = () => {
           </div>
         </div>
         <div className="cont-imgs-team-poderosas">
-          <figure className="box-imgs-team-poderosas">
+          <div className="box-imgs-team-poderosas">
             <img src={poderosas_team} alt="Imagen del equipo poderoso" className="img-team-poderosas" />
-          </figure>
+          </div>
         </div>
         <div className="cont-info-poderosas cont-testimonials">
           <h3 className="subtitle-testimonials">Testimonios</h3>

@@ -14,17 +14,6 @@
   position: relative;
 }
 
-.section-origin .origin-section-title {
-  margin: 20px;
-  font-family: "Amatic SC", cursive;
-  font-size: 35px;
-  line-height: 35px;
-  font-weight: 700;
-  text-align: center;
-  letter-spacing: 0;
-  color: #e34462;
-}
-
 .section-origin .text-container {
   padding: 1px;
 }

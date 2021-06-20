@@ -20,7 +20,7 @@ const AboutUs_Slider = () => {
   });
   return (
     <section className="about-us-slider-section" id="about-us-slider-section">
-      <h2 className='we-are-poderosas-title'>Somos Poderosas</h2>
+      <h2 className='main-title'>Somos Poderosas</h2>
       <div className="about-us-slider-container">
         <div className="bttn-slide-left" onClick={change_aboutUs_img}>
           <img src={btn_left} alt="botón izquierdo" className="bttn-slider" id="bttn-slider-left" />

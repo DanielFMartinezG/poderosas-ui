@@ -115,7 +115,7 @@ const Map = () => {
 
   return (
     <section className="map-section">
-      <h2 className="map-section-title">mapa de colombia</h2>
+      <h2 className="main-title">mapa de colombia</h2>
       <div className='map-container' ref={map_container}>
         {colombiaMap.mapComponent}
         <div className='map-event-card' id='map-event-card' style={eventCard} ref={card_events}>
