@@ -70,7 +70,7 @@ const Info_poderosas = () => {
       <h2 className='we-are-poderosas-title'>Somos poderosas</h2>
       <section className="section-info-poderosas">
         <div className="cont-info-poderosas cont-wh-poderosas">
-          <button className="button-poderosas button-who-poderosas" id="button-who-poderosas" onClick={btnWhoPoderosas}>¿Quienes Somos?</button>
+          <button className="button-poderosas button-who-poderosas" id="button-who-poderosas" onClick={btnWhoPoderosas}>¿Quienes <br></br> Somos?</button>
           <button className="button-poderosas button-who-poderosas" id="button-what-poderosas" onClick={btnWhatPoderosas}>¿Qué es lo que Hacemos?</button>
           <button className="button-poderosas button-who-poderosas" id="button-why-poderosas" onClick={btnWhyPoderosas}>¿Por qué lo Hacemos?</button>
           <div className="box-wh-poderosas" ref={whBox}>
