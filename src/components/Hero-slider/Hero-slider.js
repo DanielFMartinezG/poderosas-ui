@@ -1,4 +1,5 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect} from 'react';
+import { Link } from 'react-router-dom'
 import '../../styles/hero_slider.css'
 import Hero_slider_img from './Hero-slider-img'
 import Slider_position from './Hero_slider_position';
@@ -7,7 +8,6 @@ import interval_hero_slider from '../../scripts/hero-slider/Interval_hero_slider
 //los componentes tienen la primera letra en mayuscula
 let Hero_slider = ()=>{
     let hero_array = get_hero_images();
-    const[hero_text, set_text] = useState(hero_array[0].img_slider_hero.text_hero);
     useEffect(() => {
         // componentDidMount events
         let hero_slider_interval;
@@ -37,7 +37,9 @@ let Hero_slider = ()=>{
             </div>
             <div className="hero-description-box">
                 <p className="hero-text"></p>
-                <div className="bttn-template btn-see-more">ver más</div>
+                <Link to='/poderosas/about-us' className='button-template btn-see-more'>
+                    ver más
+                </Link>
             </div>
             <div className="hero-position-box">
             {

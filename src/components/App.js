@@ -1,10 +1,10 @@
 import React from 'react';
-import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom'
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 import Home from '../pages/Home';
 import About_us from '../pages/About-us';
 import Layout from './Header-Footer/Layout';
-let App = ()=>{
-    return(
+let App = () => {
+    return (
         <BrowserRouter>
             <Layout>
                 <Switch>
@@ -21,5 +21,4 @@ let App = ()=>{
     );
 }
 export default App;
-
 

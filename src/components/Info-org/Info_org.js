@@ -1,6 +1,5 @@
 import React from "react";
 import "../../styles/info_org.css";
-import img_pod_azul from "../../assets/img-pictures/poderosa-info-org-azul.svg";
 import img_pod_fucsia from "../../assets/img-pictures/poderosa-info-org-fucsia.svg";
 import img_pod_verde from "../../assets/img-pictures/poderosa-info-org-verde.svg";
 import img_pod_amarillo from "../../assets/img-pictures/poderosa-info-org-amarillo.svg";
@@ -11,31 +10,29 @@ import show_values from "../../scripts/info-org/show_values";
 const Info_org = () => {
   return (
     <section className="section-info-org">
+      <h2 className='main-title'>Poderosas</h2>
       <button
-        className="button-info-org"
+        className="button-template button-org"
         id="button-mision"
         onClick={show_mision}
       >
         Misión
       </button>
       <button
-        className="button-info-org"
+        className="button-template button-org"
         id="button-vision"
         onClick={show_vision}
       >
         visión
       </button>
       <button
-        className="button-info-org"
+        className="button-template button-org"
         id="button-valores"
         onClick={show_values}
       >
         valores
       </button>
       <div className="container-info-org">
-        <figure className="box-img-inicial-info-org" id="box-img-inicial">
-          <img className="img-inicial-info-org" src={img_pod_azul} alt="" />
-        </figure>
         <div className="div-info-org container-mision">
           <figure className="box-img-info-org">
             <img className="img-info-org" src={img_pod_fucsia} alt="" />
@@ -72,13 +69,15 @@ const Info_org = () => {
           </figure>
           <div className="box-text-info-org">
             <h3 className="title-info-org">Nuestros valores</h3>
-            <ul>
+            <ul className='valores-lista'>
+              <li>Unión</li>
+              <li>Transparencia</li>
+              <li>Empatia</li>
+              <li>Compromiso</li>
+              <li>Optimismo</li>
+              <li>Diligencia</li>
               <li>Empoderamiento</li>
-              <li>Empoderamiento</li>
-              <li>Empoderamiento</li>
-              <li>Empoderamiento</li>
-              <li>Empoderamiento</li>
-              <li>Empoderamiento</li>
+              <li>Pasión</li>
             </ul>
           </div>
         </div>

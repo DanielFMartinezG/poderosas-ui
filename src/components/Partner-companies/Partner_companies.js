@@ -6,7 +6,7 @@ const Parner_companies = () =>{
   const companies_imgs = companies_array();
   return(
     <section className="partner-companies-section">
-      <h2 className="partner-companies-title">Empresas Aliadas</h2>
+      <h2 className="main-title">Empresas Aliadas</h2>
       <div className="partner-companies">
         <div className="partner-companies-container">
           {companies_imgs.map((companie)=>(
