@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 import Home from '../pages/Home';
 import About_us from '../pages/About-us';
+import Questions from '../pages/Questions';
 import Layout from './Header-Footer/Layout';
 let App = () => {
     return (
@@ -13,6 +14,9 @@ let App = () => {
                     </Route>
                     <Route exact path='/poderosas/about-us'>
                         <About_us />
+                    </Route>
+                    <Route exact path='/poderosas/questions'>
+                        <Questions />
                     </Route>
                     <Redirect from='*' to='/poderosas/home' />
                 </Switch>

@@ -2,7 +2,7 @@ let staff_array = ()=> {
   let staff_array = [
     {
       img:'https://media-exp1.licdn.com/dms/image/C4D03AQEF2iY1ChdRNw/profile-displayphoto-shrink_400_400/0/1590353556639?e=1626307200&v=beta&t=6_rm2QJKsH4refCLlzyc5ll8VP4pDrHyGJce4vP7ls0',
-      name: 'daniel fernando martinez guzman de los rios',
+      name: 'mariana sanz de santamaria',
       position: 'fundadora',
     },
     {

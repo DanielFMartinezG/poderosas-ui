@@ -29,7 +29,6 @@ header nav .btn {
   background-color: #e0a3ae;
   border-radius: 5px;
   text-align: center;
-  line-height: 2;
 }
 header nav .btn:hover {
   cursor: pointer;
@@ -150,7 +149,11 @@ header nav .menu input:checked ~ span:nth-last-child(3) {
 header nav .menu input:checked ~ span:nth-last-child(2) {
   transform: rotate(-45deg) translate(1px, 0px);
 }
-
+.menu-item{
+  font-size: 20px;
+  height: 50px;
+  text-align: center;
+}
 @media screen and (min-width: 1024px) {
   header {
     flex-flow: row wrap;
@@ -161,7 +164,7 @@ header nav .menu input:checked ~ span:nth-last-child(2) {
     height: 80px;
   }
   header nav .btn-2 {
-    margin: 15px 5px 0px 0px;
+    /* margin: 15px 5px 0px 0px; */
   }
   header nav .menu ul {
     flex-direction: row;
@@ -198,5 +201,18 @@ header nav .menu input:checked ~ span:nth-last-child(2) {
   }
   header nav .menu span {
     display: none;
+  }
+  .menu-item{
+    height: 60px;
+    font-size: 18px;
+  }
+  header nav{
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+  .home-item{
+    line-height: 50px;
+    /* margin-top: 20px !important; */
   }
 }

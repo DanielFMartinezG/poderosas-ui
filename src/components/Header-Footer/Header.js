@@ -38,13 +38,13 @@ const Header = () => {
           <span></span>
           <span></span>
           <ul className='menu-ul'>
-            <li onClick={closeMenu}><Link to='/poderosas/home'>INICIO</Link></li>
+            <li className='menu-item home-item' onClick={closeMenu}><Link to='/poderosas/home'>INICIO</Link></li>
             <hr color="#FFFFFF" />
-            <li onClick={closeMenu}><a href="#">PREGUNTAS FRECUENTES</a></li>
+            <li className='menu-item' onClick={closeMenu}><Link to="/poderosas/questions">PREGUNTAS FRECUENTES</Link></li>
             <hr color="#FFFFFF" />
-            <li onClick={closeMenu}><Link to='/poderosas/about-us'>ACERCA DE PODEROSAS</Link></li>
+            <li className='menu-item' onClick={closeMenu}><Link to='/poderosas/about-us'>ACERCA DE PODEROSAS</Link></li>
             <hr color="#FFFFFF" />
-            <li onClick={closeMenu}><a href="#">CATÁLOGO DE VENTAS</a></li>
+            <li className='menu-item' onClick={closeMenu}><a href="#">CATÁLOGO DE VENTAS</a></li>
             <hr color="#FFFFFF" />
           </ul>
         </div>

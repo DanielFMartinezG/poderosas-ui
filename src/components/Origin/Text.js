@@ -4,7 +4,7 @@ const info_origin = [
     id: 1,
     title: "¿Qué es PODEROSAS?",
     img: "",
-    background_color: "#c3dff0",
+    background_color: "#d6dff0",
     font_color: "#e34462",
     parragraph: (
       <p>
@@ -20,7 +20,7 @@ const info_origin = [
   {
     id: 2,
     title: "¿Cómo nació PODEROSAS?",
-    background_color: "#F8AF7F",
+    background_color: "#f6b990",
     font_color: "#477fc4",
     parragraph: (
       <p>
@@ -53,7 +53,7 @@ const info_origin = [
     id: 3,
     title: "¿QUÉ HEMOS LOGRADO?",
     img: "",
-    background_color: "#c3dff0",
+    background_color: "#d6dff0",
     font_color: "#e34462",
     parragraph: (
       <div>

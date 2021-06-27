@@ -3,7 +3,7 @@ import '../../styles/footer.css';
 const Footer = ()=>{
   return(
     <footer>
-      <a href="#">Terminos y condiciones</a>
+      <a href="#" className='footer-text'>Terminos y condiciones</a>
       <nav>
         <ul>
           <li><a href="#" target="_blank"><i className="fab fa-whatsapp"></i></a></li>
