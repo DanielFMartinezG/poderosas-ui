@@ -66,6 +66,9 @@ body {
 .button-template:hover::before {
     border: 0px;
 }
+.button-template:focus{
+    outline: 0;
+}
 
 @media (min-width: 768px) {
     .main-title{

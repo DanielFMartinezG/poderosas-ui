@@ -77,6 +77,10 @@
 }
 .card-event-content{
   margin-bottom: 5px;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 400;
+  font-family: "Karla", sans-serif; 
 }
 .bttn-slide-event{
   margin: 0 10px;
@@ -91,6 +95,9 @@
 @media (min-width: 768px) {
   .map-event-card{
     top: 0;
+  }
+  .map-container{
+    height: 690px;
   }
   .map-event-card::after{
   position: absolute;
@@ -107,5 +114,13 @@
 @media (min-width: 1024px) {
   .map-container{
     height: 690px;
+  }
+  .card-event-title{
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .card-event-content{
+    font-size: 14px;
+    line-height: 14px;
   }
 }
