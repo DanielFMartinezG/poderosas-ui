@@ -5,9 +5,6 @@ import Map_mobil from './Map-mobile';
 import close_icon from '../../assets/img-stickers/close.svg';
 import bttn_left from '../../assets/img-stickers/slide-bttn-left.png'
 import bttn_right from '../../assets/img-stickers/slide-bttn-right.png'
-
-
-
 import events_array from '../../scripts/map.js/events-departments';
 
 
@@ -23,6 +20,8 @@ const Map = () => {
   const getInfoDepartment = (evt) => {
     const event_card = card_events.current;//equivalente a getElements, en react, se utiliza ref.current
     const index = events_array.findIndex(dept => dept.department_id === evt.target.id);
+    const mapContainer = map_container.current;
+
     if (events_array[index].event.length !== 0) {
       let dpto_event =
       {
@@ -34,12 +33,13 @@ const Map = () => {
       /*la visualización de EventCard variará dependiendo del tamaño de la pantalla,
       en pantallas menores de 768px se ubicará en el centro del componente, en pantallas
       mayores, la tarjeta se ubicará en el departamento que se clickeo */
-      if (window.screen.width < 768) {
-        const dist_x = window.screen.width * 0.5 - event_card.offsetWidth / 2;
+      if (mapContainer.clientWidth < 768) {
+        const dist_x = mapContainer.clientWidth * 0.5 - event_card.offsetWidth / 2;
         setEventCard({ visibility: "visible", transform: `translate(${dist_x}px)` })
       } else {
         const dist_x = evt.clientX - event_card.offsetWidth / 2;
         const dist_y = (evt.nativeEvent.layerY - event_card.offsetHeight - 15);
+        console.log(event_card.offsetHeight);
         setEventCard({ visibility: "visible", transform: `translate(${dist_x}px, ${dist_y}px)` })
       }
     }
@@ -92,14 +92,14 @@ const Map = () => {
     además, verificamos en que pantalla nos encontramos, de está manera, no se 
     renderizará nuevamente el mapa desktop si ya estemos en la pantalla dektop o
     la mobil si ya estamos en la mobil */
-    if (mapContainer.clientWidth < 1024 &&
+    if (mapContainer.clientWidth < 768 &&
       colombiaMap.map == 'dektop'
     ) {
       setColombiaMap({
         mapComponent: <Map_mobil getInfoDepartment={getInfoDepartment} />,
         map: 'mobil',
       });
-    } else if (mapContainer.clientWidth >= 1024 &&
+    } else if (mapContainer.clientWidth >= 768 &&
       colombiaMap.map == 'mobil'
     ) {
       setColombiaMap({
@@ -111,6 +111,11 @@ const Map = () => {
   //ejecutramos el useEffect una sola vez, al cargar por primera vez el componente
   useEffect(() => {
     setColombiaMap(showInitColombianMap());
+    /*ocultamos la tarjeta de envento del mapa si hay un cambio 
+    en el tamaño de la pantalla, es para controlar el responsive*/
+    window.addEventListener('resize', () => {
+      setEventCard({ visibility: "hidden", transform: `translate(0px, 0px)` })
+    });
   }, [])
 
   return (

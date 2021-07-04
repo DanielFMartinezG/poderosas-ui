@@ -24,6 +24,7 @@
   background-color: #eee7e3;
   color: #e34462;
   box-shadow: 0px 0px 10px 10px #bdd7fd;
+  outline: 0;
 }
 
 #frequent-questions .btn-link {
@@ -89,7 +90,13 @@ a{
   height: 100px;
   border-radius: 50%;
 }
+.btn-link:focus {
+  color: #e34462;
+}
+.btn-link:focus:active{
+  outline: 0;
 
+}
 @media (min-width: 1024px) {
   #frequent-questions {
     max-width: 1220px;

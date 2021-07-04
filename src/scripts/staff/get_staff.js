@@ -17,7 +17,7 @@ let staff_array = ()=> {
     },
     {
       img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCNeYaXFI0JkDP2frmwBqwWCR5QXgARChWPQ&usqp=CAU',
-      name: 'persona 2 de ejemplo',
+      name: 'persona 3 de ejemplo',
       position: 'ejemplo',
     },
   ]
