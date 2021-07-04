@@ -10,7 +10,7 @@ import show_values from "../../scripts/info-org/show_values";
 const Info_org = () => {
   return (
     <section className="section-info-org">
-      <h2 className='main-title'>Poderosas</h2>
+      <h2 className='main-title'>Quien somos</h2>
       <button
         className="button-template button-org"
         id="button-mision"

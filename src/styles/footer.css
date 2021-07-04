@@ -5,6 +5,7 @@ footer {
   display: flex;
   justify-content: space-between;
   padding: 7%;
+  font-size: 16px;
 }
 footer a {
   color: white;
@@ -27,6 +28,7 @@ footer ul li a {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    font-size: 18px;
   }
   footer ul {
     justify-content: unset;
