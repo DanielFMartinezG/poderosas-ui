@@ -7,7 +7,7 @@ const interval_hero_slider = (slider_hero_array)=>{
         let hero_slider_function =(index,dist) => {
                 slider_img_current[0].classList.toggle("position_selected");//ocultamos el efecto de item seleccionado al viejo item
                 slide_item_postion[index].classList.toggle("position_selected");//agregamos el efecto de item selccionado al nuevo item
-                hero_text.textContent = slider_hero_array[index].img_slider_hero.text_hero;//asignamos el nuevo texto
+                hero_text.textContent = slider_hero_array[index].img_slider_hero.text_phrase;//asignamos el nuevo texto
                 // //ciclo para trasladar en x los imags box una distancia especifica
                 for(let i=0;i<slider_hero_array.length;i++){
                         hero_slider_box[i].style.transform = "translateX("+(dist)+"px)";
@@ -16,7 +16,7 @@ const interval_hero_slider = (slider_hero_array)=>{
         // slider_img_current[pos].classList.toggle('position_selected');
         if (slider_img_current.length == 0){
                 slide_item_postion[0].classList.toggle('position_selected');
-                hero_text.textContent = slider_hero_array[0].img_slider_hero.text_hero;//asignamos el nuevo texto
+                hero_text.textContent = slider_hero_array[0].img_slider_hero.text_phrase;//asignamos el nuevo texto
         }else{
                 let index= slider_hero_array.findIndex(x => x.slider_position_id == slider_img_current[0].id);
                 if (index < (slider_hero_array.length-1)){
