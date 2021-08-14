@@ -1,22 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react'
 import StaffCart from './StaffCart';
-import get_staff from '../../scripts/staff/get_staff';
+import getStaff from '../../scripts/staff/get_staff';
 import '../../styles/staff.css'
 
 const Staff = () => {
-  let staff_array = get_staff();
+
+  const [staffArray, setStaffArray] = useState([]);
+
+  useEffect(async function () {
+    const response = await getStaff();
+    setStaffArray(response);
+  }, []);
 
   return (
     <section className='staff-section'>
-      <h2 className='main-title staff-title'>nuestro equipo</h2>
+      <h2 className='main-title'>nuestro equipo</h2>
       <div className='staff-container'>
-        {staff_array.map(element => {
+        {staffArray.map(element => {
           return (
             <StaffCart
               img={element.img}
               name={element.name}
               position={element.position}
-              key={element.name}
+              key={element._id}
             ></StaffCart>
           )
         })}
