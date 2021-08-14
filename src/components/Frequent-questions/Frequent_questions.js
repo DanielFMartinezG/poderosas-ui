@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../../styles/frequent_questions.css';
 import QuestionCard from './Question_card';
-import peopleQuestions from '../../scripts/frequent-questions/get_questions';
-import aboutQuestions from '../../scripts/frequent-questions/get_questions_about';
+import {getQuestions, GetQuestiosnAbout} from '../../scripts/frequent-questions/get_questions'
 
 const FrequentQuestions = () => {
+
+  const [peopleQuestions, setpeopleQuestions] = useState([]);
+  const [aboutQuestions, setAboutQuestions] = useState([]);
+
+  useEffect(async function() {
+    const responseQuestion = await getQuestions();
+    const responseQuestionsAbout = await GetQuestiosnAbout();
+    setpeopleQuestions(responseQuestion);
+    setAboutQuestions(responseQuestionsAbout);  
+  },[]);
 
   return (
     <section id="frequent-questions">
