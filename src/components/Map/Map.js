@@ -5,13 +5,14 @@ import Map_mobil from './Map-mobile';
 import close_icon from '../../assets/img-stickers/close.svg';
 import bttn_left from '../../assets/img-stickers/slide-bttn-left.png'
 import bttn_right from '../../assets/img-stickers/slide-bttn-right.png'
+import getEventsDepartment from '../../scripts/map.js/get_events_department';
 import events_array from '../../scripts/map.js/events-departments';
-
 
 const Map = () => {
   //estado creado para la visibilidad de la carta de eventos
   const [eventCard, setEventCard] = useState({ visibility: 'hidden' });
   const [event, setEvent] = useState([]);
+  const [eventsArray, setEventsArray] = useState(events_array);
   //referencia creada para llamar al map-event-container desde el dom virtual
   const card_events = useRef();
   //referencia al contenedor del mapa
@@ -19,15 +20,15 @@ const Map = () => {
   //función encargada de mover el event-card y llamar actualizar la información de los eventos 
   const getInfoDepartment = (evt) => {
     const event_card = card_events.current;//equivalente a getElements, en react, se utiliza ref.current
-    const index = events_array.findIndex(dept => dept.department_id === evt.target.id);
+    const index = eventsArray.findIndex(dept => dept.department_id === evt.target.id);
     const mapContainer = map_container.current;
 
-    if (events_array[index].event.length !== 0) {
+    if (eventsArray[index].event.length !== 0) {
       let dpto_event =
       {
-        department: events_array[index].department_id,
-        event_title: events_array[index].event[0].event_title,
-        event_descritpion: events_array[index].event[0].event_descritpion
+        department: eventsArray[index].department_id,
+        event_title: eventsArray[index].event[0].event_title,
+        event_descritpion: eventsArray[index].event[0].event_descritpion
       }
       setEvent(dpto_event);
       /*la visualización de EventCard variará dependiendo del tamaño de la pantalla,
@@ -39,24 +40,23 @@ const Map = () => {
       } else {
         const dist_x = evt.clientX - event_card.offsetWidth / 2;
         const dist_y = (evt.nativeEvent.layerY - event_card.offsetHeight - 15);
-        console.log(event_card.offsetHeight);
         setEventCard({ visibility: "visible", transform: `translate(${dist_x}px, ${dist_y}px)` })
       }
     }
   }
   const changEventInfo = (evt) => {
-    const index_dpto = events_array.findIndex(dpto => dpto.department_id === event.department);
-    const index_event = events_array[index_dpto].event.findIndex(evt => evt.event_title === event.event_title);
+    const index_dpto = eventsArray.findIndex(dpto => dpto.department_id === event.department);
+    const index_event = eventsArray[index_dpto].event.findIndex(evt => evt.event_title === event.event_title);
     const i = (evt.target.id === 'bttn-event-slide-left') ? (-1) : (1);
     if (
-      index_event + i < events_array[index_dpto].event.length &&
+      index_event + i < eventsArray[index_dpto].event.length &&
       index_event + i >= 0
     ) {
       let dpto_event =
       {
-        department: events_array[index_dpto].department_id,
-        event_title: events_array[index_dpto].event[index_event + i].event_title,
-        event_descritpion: events_array[index_dpto].event[index_event + i].event_descritpion
+        department: eventsArray[index_dpto].department_id,
+        event_title: eventsArray[index_dpto].event[index_event + i].event_title,
+        event_descritpion: eventsArray[index_dpto].event[index_event + i].event_descritpion
       }
       setEvent(dpto_event);
     }
@@ -70,7 +70,7 @@ const Map = () => {
   puede ser desktop o mobil */
   const showInitColombianMap = () => {
     const mapContainer = map_container.current;
-    if (mapContainer.clientWidth < 1024) {
+    if (mapContainer.clientWidth < 768) {
       return ({
         mapComponent: <Map_mobil getInfoDepartment={getInfoDepartment} />,
         map: 'mobil',
@@ -78,7 +78,7 @@ const Map = () => {
     } else {
       return ({
         mapComponent: <Map_desktop getInfoDepartment={getInfoDepartment} />,
-        map: 'dektop',
+        map: 'desktop',
       });
     }
   }
@@ -90,10 +90,10 @@ const Map = () => {
     const mapContainer = map_container.current;
     /* chequeamos el tamaño del contenedor para renderizar el mapa respectivo,
     además, verificamos en que pantalla nos encontramos, de está manera, no se 
-    renderizará nuevamente el mapa desktop si ya estemos en la pantalla dektop o
+    renderizará nuevamente el mapa desktop si ya estemos en la pantalla desktop o
     la mobil si ya estamos en la mobil */
     if (mapContainer.clientWidth < 768 &&
-      colombiaMap.map == 'dektop'
+      colombiaMap.map == 'desktop'
     ) {
       setColombiaMap({
         mapComponent: <Map_mobil getInfoDepartment={getInfoDepartment} />,
@@ -104,12 +104,22 @@ const Map = () => {
     ) {
       setColombiaMap({
         mapComponent: <Map_desktop getInfoDepartment={getInfoDepartment} />,
-        map: 'dektop',
+        map: 'desktop',
       });
     }
   }
   //ejecutramos el useEffect una sola vez, al cargar por primera vez el componente
-  useEffect(() => {
+  useEffect(async function () {
+    const currentEvents = await getEventsDepartment();
+    currentEvents.forEach(event => {
+      const index = events_array.findIndex(val => val.department_id === event.ID_departament);
+      events_array[index].event.push({
+        event_id: event._id,
+        event_title: event.name_event,
+        event_descritpion: event.descripcion,
+      });
+    });
+    setEventsArray(events_array);
     setColombiaMap(showInitColombianMap());
     /*ocultamos la tarjeta de envento del mapa si hay un cambio 
     en el tamaño de la pantalla, es para controlar el responsive*/
