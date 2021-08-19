@@ -9,10 +9,12 @@ import getEventsDepartment from '../../scripts/map.js/get_events_department';
 import events_array from '../../scripts/map.js/events-departments';
 
 const Map = () => {
+
   //estado creado para la visibilidad de la carta de eventos
   const [eventCard, setEventCard] = useState({ visibility: 'hidden' });
   const [event, setEvent] = useState([]);
   const [eventsArray, setEventsArray] = useState(events_array);
+  const [requestState, setRequestState] = useState('NotSubmitted');
   //referencia creada para llamar al map-event-container desde el dom virtual
   const card_events = useRef();
   //referencia al contenedor del mapa
@@ -108,25 +110,33 @@ const Map = () => {
       });
     }
   }
+
+
+
   //ejecutramos el useEffect una sola vez, al cargar por primera vez el componente
   useEffect(async function () {
-    const currentEvents = await getEventsDepartment();
-    currentEvents.forEach(event => {
-      const index = events_array.findIndex(val => val.department_id === event.ID_departament);
-      events_array[index].event.push({
-        event_id: event._id,
-        event_title: event.name_event,
-        event_descritpion: event.descripcion,
+    if (requestState === 'NotSubmitted') {
+      const currentEvents = await getEventsDepartment();
+      currentEvents.forEach(event => {
+        const index = events_array.findIndex(val => val.department_id === event.ID_departament);
+        events_array[index].event.push({
+          event_id: event._id,
+          event_title: event.name_event,
+          event_descritpion: event.descripcion,
+        });
       });
-    });
-    setEventsArray(events_array);
-    setColombiaMap(showInitColombianMap());
+      setEventsArray(events_array);
+      setColombiaMap(showInitColombianMap());
+      setRequestState('Success');
+    }
     /*ocultamos la tarjeta de envento del mapa si hay un cambio 
     en el tamaño de la pantalla, es para controlar el responsive*/
-    window.addEventListener('resize', () => {
-      setEventCard({ visibility: "hidden", transform: `translate(0px, 0px)` })
-    });
-  }, [])
+    if (eventCard.visibility != 'hidden') {
+      window.addEventListener('resize', () => {
+        setEventCard({ visibility: "hidden", transform: `translate(0px, 0px)` })
+      });
+    }
+  })
 
   return (
     <section className="map-section">
