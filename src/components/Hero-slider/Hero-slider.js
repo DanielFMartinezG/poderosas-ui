@@ -14,12 +14,12 @@ let Hero_slider = () => {
     async function callHeroImages() {
         const response = await getHeroImages();
         setHeroArray(response);
-        setHttpRequest(false);
     }
-
+    
     useEffect(() => {
         if (httpRequest) {
             callHeroImages();
+            setHttpRequest(false);
         } else if (httpRequest == false && heroArray.length != 0) {
             // componentDidMount events
             let hero_slider_interval;
