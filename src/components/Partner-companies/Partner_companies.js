@@ -5,6 +5,9 @@ import Companie_img from './Companie_img';
 const Parner_companies = () => {
 
   const [companies, setCompanies] = useState([]);
+
+  /*ejecutamos la función que nos permite obtener las compañoas aliadas, estas
+  se almaacenarán en el estado de companies */
   useEffect(async function () {
     setCompanies(await companies_array());
   }, []);

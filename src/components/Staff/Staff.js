@@ -7,6 +7,8 @@ const Staff = () => {
 
   const [staffArray, setStaffArray] = useState([]);
 
+  /*obtenemos el staff al cargar el componente, solo lo ejecutamos
+  la primera vez que se monta el componente y lo asignamos a su estado respectivo */
   useEffect(async function () {
     const response = await getStaff();
     setStaffArray(response);

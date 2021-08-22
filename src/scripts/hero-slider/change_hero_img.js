@@ -3,7 +3,7 @@ const change_hero_img = (event)=>{
   let hero_array = get_hero_images();
   // clearInterval(hero_slider_interval); // COMO DETENGO EL SET INTERVAL QUE UTILIZO EN EL USE EFFECT????
   let hero_slider_box = document.getElementsByClassName("hero-slider-img-box");//llamamos los nodos contenedores de las imagenes
-  let dist_img = hero_slider_box[0].offsetWidth;//es
+  let dist_img = hero_slider_box[0].offsetWidth;//obtenemos el ancho del contenedor
   let hero_text = document.getElementsByClassName("hero-text")[0];//nodo del texto de la sección hero
   let slide_item_postion = document.getElementsByClassName("slide-postion");
   let slider_img_current = document.getElementsByClassName('position_selected');

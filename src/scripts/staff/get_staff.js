@@ -1,5 +1,7 @@
 const routh = 'http://localhost:3000';
 
+//función encargada de traer el staff de la BD
+
 async function staff_array () {
   
   const response = await fetch(`${routh}/staff/getStaff`);

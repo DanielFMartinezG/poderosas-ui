@@ -1,3 +1,9 @@
+/**
+ * slide_news permite agregar el efecto de carrusel infinito, este depende
+ * del ancho del contenedor y del número de noticias que contenga
+ * @param content_news_slider arreglo de noticias
+ */
+
 let slide_news = (content_news_slider) =>{
   let news_slider = document.getElementsByClassName("news-slider")[0];
   let transition_value = 0;
@@ -13,7 +19,7 @@ let slide_news = (content_news_slider) =>{
     {transform: "translateX("+ (-transition_value)+"px)"}
   ];
   //agregamos la propiedad animate al slider
-  news_slider.animate(scroll_transition,{  
+  news_slider.animate(scroll_transition,{
     duration: 25000,
     iterations: Infinity,
     easing: "linear"

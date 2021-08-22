@@ -31,7 +31,7 @@ const Header = () => {
     <header>
       <img src={logo} alt="Logo" className="logo" />
       <nav>
-        <a href="#" className="btn btn-2">DONACIONES</a>
+        <a href="https://nibi.com.co/buscar?q=poderosas" className="btn btn-2">DONACIONES</a>
         <div className="menu">
           <input type="checkbox" id="checkbox" onChange={scroll_body} ref={checkboxRef}/>
           <span></span>
@@ -44,7 +44,7 @@ const Header = () => {
             <hr color="#FFFFFF" />
             <li className='menu-item' onClick={closeMenu}><Link to='/poderosas/about-us'>ACERCA DE PODEROSAS</Link></li>
             <hr color="#FFFFFF" />
-            <li className='menu-item' onClick={closeMenu}><a href="#">CATÁLOGO DE VENTAS</a></li>
+            <li className='menu-item' onClick={closeMenu}><a href="https://nibi.com.co/fundaciones/id/PODEROSAS?tab=1">CATÁLOGO DE VENTAS</a></li>
             <hr color="#FFFFFF" />
           </ul>
         </div>

@@ -8,19 +8,24 @@ import interval_hero_slider from '../../scripts/hero-slider/Interval_hero_slider
 //los componentes tienen la primera letra en mayuscula
 let Hero_slider = () => {
 
+    //utilizamos heroArray para almacenar las imagenes optenidas de la BD
     const [heroArray, setHeroArray] = useState([]);
+    //utilizo httpRequest para controlar el llamado de las imagenes de la BD 
     const [httpRequest, setHttpRequest] = useState(true);
 
+    //función encargada de llamar y almacenar las imagenes del carrusel
     async function callHeroImages() {
         const response = await getHeroImages();
         setHeroArray(response);
     }
     
     useEffect(() => {
+        //httpRequest permite controlar que se ejecute una unica vez el llamado a la API
         if (httpRequest) {
             callHeroImages();
             setHttpRequest(false);
         } else if (httpRequest == false && heroArray.length != 0) {
+            //ejecutamos el movimiento del carrusel cuando se hayan optenido las imagenes 
             // componentDidMount events
             let hero_slider_interval;
             interval_hero_slider(heroArray);

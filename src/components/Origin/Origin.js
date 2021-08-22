@@ -52,5 +52,3 @@ const Info = ({ title, parragraph, background_color, color, font_color }) => {
 };
 
 export default Origin;
-
-//

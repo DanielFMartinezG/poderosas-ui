@@ -7,7 +7,10 @@ import third_testimony from '../../assets/img-logos/testimonio3.jpeg';
 import wh_img from '../../assets/img-logos/icon-info-wh-poderosas.png';
 
 const Info_poderosas = () => {
-  /* creamos un estado incializado para manipular el comportamiento de la sección de los WH-Buttons*/
+  /* 
+    creamos un estado incializado para manipular el comportamiento de la sección de los WH-Buttons
+    el useState almacenará las etiquetas que se renderizan en la sección de WH poderosas
+  */
   const [whState, setwhState] = useState({
     title: "¿Quienes Somos?",
     content: "Somos una ONG de Educación Integral para la Sexualidad (EIS) para reforzar el poder de decisión de adolescentes y jóvenes entre los 13 y 20 años de edad en comunidades de mayor grado de vulnerabilidad en Colombia, mediante círculos de mujeres y círculos de hombres extracurriculares basado en un currículo de derechos sexuales y reproductivos con enfoque de género."
@@ -16,7 +19,7 @@ const Info_poderosas = () => {
   const [testiomnyImg, setTestimonyImg] = useState({ cont: 1, img: first_testimony });
   //creamos una referencia hacia los nodos de los contenedores WH
   const whBox = useRef();
-  /*funciones que permitirán setear el valor de title y content al ejecutarsen
+  /*funciones que permitirán setear el valor de title y content al ejecutarse
   mediante el onClick de los WH-Buttons*/
   const btnWhoPoderosas = () => {
     setwhState({

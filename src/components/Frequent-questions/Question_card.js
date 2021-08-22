@@ -1,6 +1,14 @@
 import questionSvg from '../../assets/img-logos/Preguntas.svg'
 import React from 'react';
 
+/**
+ * @param {*} title titulo del box de la pregunta
+ * @param {*} text texto de respuesta del box de pregunta
+ * @param {*} collapse permite relacionar el box que se desplegará con el box de la pregunta
+ * @param {*} background_color color de fondo del box de pregunta
+ * @returns 
+ */
+
 const QuestionCard = (props) => {
   return (
     <div className="card">
@@ -31,7 +39,6 @@ const QuestionCard = (props) => {
             {props.text}
           </div>
           <img className='question-img' src={questionSvg}></img>
-
         </div>
       </div>
     </div>

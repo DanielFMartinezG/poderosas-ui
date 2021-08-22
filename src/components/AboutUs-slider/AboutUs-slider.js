@@ -9,11 +9,16 @@ import '../../styles/aboutUs_slider.css'
 
 const AboutUs_Slider = () => {
 
+  //imagesArray permitirá almacenar las imagenes del carrusel
   const [imagesArray, setImagesArray] = useState([]);
 
   useEffect(async function () {
+    //ejecutamos la función encargada de llamar las imagenes del slider,
+    // posteriormente, la almacenamos en imagesArray
     const response = await getSliderImgs();
     setImagesArray(response);
+    //slide_images permite ampliar la imagen del centro del carrusel,
+    //en este caso, solo se ejecutará cuando contenga mas de 3 imagenes
     if(response.length > 3){
       slide_images();
     }

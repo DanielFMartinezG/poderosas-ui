@@ -1,19 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import '../../styles/frequent_questions.css';
 import QuestionCard from './Question_card';
-import {getQuestions, GetQuestiosnAbout} from '../../scripts/frequent-questions/get_questions'
+import { getQuestions, GetQuestiosnAbout } from '../../scripts/frequent-questions/get_questions'
 
 const FrequentQuestions = () => {
 
+  /**
+   * La sección se pergutnas frecuentes se divide en dos tipo 'de poderosas', 'sobre poderosas',
+   * cada tipo de pregunta se almacena en un estado aparte
+   */
   const [peopleQuestions, setpeopleQuestions] = useState([]);
   const [aboutQuestions, setAboutQuestions] = useState([]);
 
-  useEffect(async function() {
+  useEffect(async function () {
+    /**
+     * ejecutamos las funciones que nos permiten obtener las preguntas de la sección
+     * de preguntas frecuentes, posteriormente las almacenamos en sus estados respectivos
+     */
     const responseQuestion = await getQuestions();
     const responseQuestionsAbout = await GetQuestiosnAbout();
     setpeopleQuestions(responseQuestion);
-    setAboutQuestions(responseQuestionsAbout);  
-  },[]);
+    setAboutQuestions(responseQuestionsAbout);
+  }, []);
 
   return (
     <section id="frequent-questions">
@@ -37,6 +45,7 @@ const FrequentQuestions = () => {
                   title={question.title}
                   text={question.text}
                   collapse={`collapse-${index}`}
+                  //intercalamo el color del box de la pregunta
                   background_color={index % 2 === 0 ? '#d6dff0' : '#f6b990'}
                   key={`podQuestion-${index}`}
                 />
@@ -50,6 +59,7 @@ const FrequentQuestions = () => {
                   title={question.title}
                   text={question.text}
                   collapse={`collapse-about-${index}`}
+                  //intercalamo el color del box de la pregunta
                   background_color={index % 2 === 0 ? '#d6dff0' : '#f6b990'}
                   key={`podAboutQuestion-${index}`}
                 />

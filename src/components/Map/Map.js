@@ -46,6 +46,11 @@ const Map = () => {
       }
     }
   }
+
+  /*
+    función encargada de recorrer los eventos de un departamento, mediante está función
+    cambio la información de la tarjeta de descripción de un evento
+  */
   const changEventInfo = (evt) => {
     const index_dpto = eventsArray.findIndex(dpto => dpto.department_id === event.department);
     const index_event = eventsArray[index_dpto].event.findIndex(evt => evt.event_title === event.event_title);
@@ -111,12 +116,11 @@ const Map = () => {
     }
   }
 
-
-
-  //ejecutramos el useEffect una sola vez, al cargar por primera vez el componente
   useEffect(async function () {
+    //requestState permite que getEventsDepartment solo se ejecuté una vez
     if (requestState === 'NotSubmitted') {
       const currentEvents = await getEventsDepartment();
+      //asignamos en events_array los eventos traidos de la BD
       currentEvents.forEach(event => {
         const index = events_array.findIndex(val => val.department_id === event.ID_departament);
         events_array[index].event.push({

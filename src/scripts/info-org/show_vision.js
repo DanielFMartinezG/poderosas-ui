@@ -1,3 +1,7 @@
+/**
+ * mediante está función se ocultarán los campos de misión y valores de la funcación,
+ * unicamente quedará desplegado la sección de visión
+ */
 const show_vision = ()=>{
   // Variables 
   const buttonMision = document.getElementById('button-mision');

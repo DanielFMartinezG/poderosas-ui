@@ -1,3 +1,5 @@
+/*en el presente arreglo asignamos los eventos que se traigan de la BD */
+
 let events_department = [
   {
     department_id: "CO-AMA",

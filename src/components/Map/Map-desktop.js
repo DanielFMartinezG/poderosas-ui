@@ -1,6 +1,12 @@
 import React from 'react'
 import events_array from '../../scripts/map.js/events-departments';
 const Map_desktop = (props)=> {
+  /**
+   * class_events_card permite identificar si el departamento cuenta o no con eventos, 
+   * esto permite modificar el estilo de dicho SVG que representa el dpto
+   * @param dpto_id id del departamento sobre el cual se realizará la busqueda
+   * @returns 
+   */
   const class_events_card = (dpto_id)=>{
     const index = events_array.findIndex(evt => evt.department_id === dpto_id)
     return (events_array[index].event.length === 0)?('department'):('department-with-events');

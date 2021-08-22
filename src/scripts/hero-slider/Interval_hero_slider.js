@@ -1,6 +1,6 @@
 const interval_hero_slider = (slider_hero_array)=>{
         let hero_slider_box = document.getElementsByClassName("hero-slider-img-box");//llamamos los nodos contenedores de las imagenes
-        let dist_img = hero_slider_box[0].offsetWidth;//es
+        let dist_img = hero_slider_box[0].offsetWidth;//obtenemos el ancho de los contenedores
         let hero_text = document.getElementsByClassName("hero-text")[0];//nodo del texto de la sección hero
         let slide_item_postion = document.getElementsByClassName("slide-postion");
         let slider_img_current = document.getElementsByClassName('position_selected');
@@ -13,7 +13,6 @@ const interval_hero_slider = (slider_hero_array)=>{
                         hero_slider_box[i].style.transform = "translateX("+(dist)+"px)";
                 }
         }  
-        // slider_img_current[pos].classList.toggle('position_selected');
         if (slider_img_current.length == 0){
                 slide_item_postion[0].classList.toggle('position_selected');
                 hero_text.textContent = slider_hero_array[0].img_slider_hero.text_phrase;//asignamos el nuevo texto

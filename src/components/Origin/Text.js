@@ -100,7 +100,5 @@ const info_origin = [
     ),
   },
 ];
-// return info_origin;
-// }
 
 export default info_origin;
