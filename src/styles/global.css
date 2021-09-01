@@ -21,6 +21,7 @@ body {
     letter-spacing: 0;
     color: #e34462;
 }
+
 .button-template{
     width: 25%;
     max-width: 125px;
@@ -70,12 +71,74 @@ body {
     outline: 0;
 }
 
+
+
+.main-title-admin{
+    margin: 30px 20px 0px 20px;
+    font-family: "Amatic SC", cursive;
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0;
+    color: #e34462;
+}
+.sub-title-admin{
+    margin: 0 0 10px 15px;
+    font-family: "Amatic SC", cursive;
+    font-size: 25px;
+    line-height: 25px;
+    font-weight: 700;
+    letter-spacing: 0;
+    color: #e34462;
+}
+.button-template-admin{
+    width: 125px;
+    font-size: 20px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    background-color: #DFA300;
+    color: #FFFFFF;
+    font-family: "Amatic SC", cursive;
+    font-weight: 700;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    transition: 0.5s;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.button-template-admin:hover{
+    border: solid 5px #e34462;
+    color: #e34462;
+    font-weight: bold;
+}
+
+.button-template-admin:active{
+    border-color: #DFA300;
+    background-color: #e34462;
+    color: #FFFFFF;
+}
+
+
 @media (min-width: 768px) {
     .main-title{
         font-size: 45px;
         line-height: 45px;
     }
+    .main-title-admin{
+        font-size: 45px;
+        line-height: 45px;
+    }
+    .sub-title-admin{
+        font-size: 36px;
+        line-height: 45px;
+    }
 }
+
 @media (min-width: 1024px) {
     .main-title{
         margin-top: 45px;
@@ -92,4 +155,23 @@ body {
     .button-template:last-of-type{
         margin-right: 0px;
     }
+
+    .body-section{
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        width: 1024px;
+    }
+    
+    .main-title-admin{
+        margin-top: 45px;
+        font-size: 55px;
+        line-height: 60px;
+    }
+    .sub-title-admin{
+        margin-top: 45px;
+        font-size: 36px;
+        line-height: 60px;
+    }
+
 }

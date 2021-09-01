@@ -1,7 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/global.css';
-//la veriable que se importa de un componentes debe tener la primera letra en mayuscula
+import firebase from 'firebase';
+import fbConfig from './scripts/admin/firebase_config'
 import App from './components/App'
+
 const page_container = document.getElementById('page-container');
+firebase.initializeApp(fbConfig);
+
+
 ReactDOM.render(<App />,page_container);

@@ -4,6 +4,9 @@ import Home from '../pages/Home';
 import About_us from '../pages/About-us';
 import Questions from '../pages/Questions';
 import Layout from './Header-Footer/Layout';
+import Login from '../pages/Admin-login';
+import HomeAdmin from '../pages/Admin-home';
+
 let App = () => {
     return (
         <BrowserRouter>
@@ -17,6 +20,12 @@ let App = () => {
                     </Route>
                     <Route exact path='/poderosas/questions'>
                         <Questions />
+                    </Route>
+                    <Route exact path='/poderosas/admin/login'>
+                        <Login />
+                    </Route>
+                    <Route exact path='/poderosas/admin/home'>
+                        <HomeAdmin />
                     </Route>
                     <Redirect from='*' to='/poderosas/home' />
                 </Switch>
