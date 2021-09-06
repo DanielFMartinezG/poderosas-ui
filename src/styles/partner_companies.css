@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.partner-companies-section {
+  background-color: #EEE7E3;
+}
+
+.partner-companies-section .partner-companies {
+  display: inline-block;
+  width: 100%;
+}
+
+.partner-companies-section .partner-companies .partner-companies-container {
+  text-align: center;
+  align-items: center;
+  width: auto;
+  white-space: nowrap;
+  overflow: scroll;
+  margin: 20px;
+  background-color: #EEE7E3;
+}
+
+.partner-companies-section .partner-companies .partner-companies-container::-webkit-scrollbar {
+  display: none;
+}
+
+.partner-companies-section .partner-companies .partner-companies-container .partner-companies-logo {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 20px 8px;
+}
+
+.partner-companies-section .partner-companies .partner-companies-container .partner-companies-logo .partner-companies-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 5px 3px 3px #BDD7FD;
+}
+
+@media screen and (min-width: 700px) {
+  .partner-companies-section .partner-companies .partner-companies-container::-webkit-scrollbar {
+    display: none;
+  }
+  .partner-companies-section .partner-companies .partner-companies-container .partner-companies-logo {
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    margin: 20px 8px;
+  }
+  .partner-companies-section .partner-companies .partner-companies-container .partner-companies-logo .partner-companies-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 5px 3px 3px #BDD7FD;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .partner-companies-section .partner-companies .partner-companies-container::-webkit-scrollbar {
+    display: none;
+  }
+  .partner-companies-section .partner-companies .partner-companies-container .partner-companies-logo {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    margin: 20px 8px;
+  }
+  .partner-companies-section .partner-companies .partner-companies-container .partner-companies-logo .partner-companies-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 5px 3px 3px #BDD7FD;
+  }
+}

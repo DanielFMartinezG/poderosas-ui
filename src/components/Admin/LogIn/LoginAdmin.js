@@ -1,0 +1,78 @@
+import React, { useRef } from 'react';
+import { useHistory } from 'react-router-dom';
+import '../../../styles/admin/login.css';
+import podImg from '../../../assets/img-logos/equipo-poderoso.png';
+
+const LoginAdmin = () => {
+
+  const path = 'http://64.227.101.60:4000';
+  const emailRef = useRef();
+  const passwordRef = useRef();
+  const history = useHistory();
+
+  /* Función encargada de realizar el proceso de login para acceder a los formularios
+  la función permite redirigir al home una vez el login sea exitoso */
+  async function login() {
+    const email = emailRef.current;
+    const password = passwordRef.current;
+    const credentials = {
+      'mail': email.value,
+      'password': password.value
+    };
+    const response = await fetch(`${path}/admin/login`, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+      body: JSON.stringify(credentials)
+    })
+    const responseJson = await response.json();
+
+    //almacenamos el token en el Storage y redireccionamos al home
+    if (responseJson.msq === 'Inicio correcto') {
+      localStorage.setItem('admin', responseJson.token)
+      history.push('./home');
+    } else {
+      alert('Correo o contraseña invalidos.');
+    }
+
+  }
+
+  return (
+    <React.Fragment>
+      <section className="banner">
+        <img className="img" src={podImg} alt="login"></img>
+        <p className="title main-title-admin">Poderosas Admin</p>
+      </section>
+      <section className="form">
+        <div className="box">
+          <label className="title" htmlFor="">Email</label>
+          <input
+            type="email"
+            name=""
+            className="inp"
+            placeholder='ejemploAdmin@poderosas.com'
+            id="user_admin_name"
+            ref={emailRef}
+          />
+        </div>
+        <div className="box">
+          <label className="title" htmlFor="">Password</label>
+          <input
+            type="password"
+            name=""
+            className="inp"
+            placeholder="******"
+            id="user_admin_password"
+            ref={passwordRef}
+          />
+        </div>
+        <div className="forgot-password">Bienvenido a Poderosas Admin</div>
+      </section>
+      <div className="button">
+        <button className="button-template-admin login " id="login-button" onClick={login}>Login</button>
+      </div>
+    </React.Fragment>
+  );
+}
+export default LoginAdmin;

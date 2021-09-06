@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+## Bienvenido al repositorio oficial de Poderosas!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Sitio web informativo, administrable y funcional sobre la fundación Poderosas Colombia, que busca aumentar la visibilidad, alcance e impacto de su labor de transformación social, la cual es trabajar en pro del empoderamiento juvenil desde la educación sexual, constribuyendo así a tres de los objetivos de desarrollo sostenible planetados por la ONU; los cuales son:
+Educación de calidad
+Igualdad de género
+Reducción de las desigualdades.
 
-## Available Scripts
+La aplicación web se divide en 4 landing page con diferentes funcionalidades:
+Página de inicio: sección con carrusel de frases e imágenes, mapa de eventos de la fundación, en el cuál se pintarán los departamentos de Colombia en los cuales Poderosas haya hecho presencia , carrusel de noticias publicadas sobre la organización.
+Acerca de Poderosas:  sección con carrusel de imágenes relevantes de actividades de la fundación, sección informativa sobre la fundación, la cual muestra su misión, visión, qué hacen y por qué lo hacen.
+Preguntas frecuentes: sección de preguntas más comunes desplegables con sus respuestas qué hacen los jóvenes sobre educación sexual y sobre la fundación Poderosas.
+Admin: sección que a través de un login llevará a un formulario desde el cual se pueden modificar las funcionalidades principales de la página, eliminando o subiendo información nueva.
 
-In the project directory, you can run:
+**Enlace proyecto**
+www.poderosas.com.co
 
-### `yarn start`
+**Tecnologías utilizadas**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+**Front**:
+HTML
+CSS
+JS
+React
+Firebase Storage
+Bootstrap
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+**Back**:
+Node. JS
+Express
+Mongo DB
 
-### `yarn test`
+**Clonar repo **
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. En GitHub, visita la página principal del repositorio de Poderosas en el enlace:
+https://github.com/DanielFMartinezG/poderosas-ui
+2. Da clic en el botón verde llamado "code".
+3. Clic en download ZIP.
+4. Descomprime la carpeta.
+5. Abre carpeta en el editor de código de tu máquina.
 
-### `yarn build`
+**Instalación**
+Instalar los paquetes detallados en el apartado de **dependencias** utilizados en el proyecto, una vez esté clonado en local, mediante el comando npm install.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Dependencias**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Descargar back en el siguiente enlace:
+https://github.com/DanielFMartinezG/poderosas-back
+Descargar dependencias del npm:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Front**:
+@testing-library/jest-dom
+@testing-library/react
+@testing-library/user-event
+aos
+react
+react-dom
+firebase
+reactfire
+react-router-dom
+react-scripts
+web-vitals
 
-### `yarn eject`
+**Back**:
+bcrypt
+cors
+dotenv
+express
+jsonwebtoken
+mongoose
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Creadores**
+Daniel Fernando Martínez
+Alex Nanclares
+Jeferson Giraldo
