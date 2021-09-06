@@ -5,7 +5,7 @@ import saveImg from '../../../scripts/admin/save_img_firebase';
 
 const SliderAboutUsForm = () => {
 
-  const path = 'http://localhost:3000';
+  const path = 'http://64.227.101.60:4000';
   const history = useHistory();
   //utilizamos imgText para mostrar el nombre de la imagen que se está subiendo al formulario 
   const [imgText, setImgText] = useState('sube una imagen');

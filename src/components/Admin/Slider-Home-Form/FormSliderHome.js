@@ -5,7 +5,7 @@ import saveImg from '../../../scripts/admin/save_img_firebase';
 
 const FormSliderHome = () => {
 
-  const path = 'http://localhost:3000';
+  const path = 'http://64.227.101.60:4000';
   //utilizamos imgText para mostrar el nombre de la imagen que se está subiendo al formulario 
   const [imgText, setImgText] = useState('sube una imagen');
   const [formUpload, serFormUpload] = useState(true);
@@ -177,8 +177,8 @@ const FormSliderHome = () => {
             <span className='label-text' >Frase poderosa</span>
             <textarea name="mensaje" rows="3" className='text-area' ref={podPhraseRef}></textarea>
           </div>
-          <button 
-            className='button-template-admin update-button' 
+          <button
+            className='button-template-admin update-button'
             onClick={saveFirebaseImg}
           >
             Actualizar

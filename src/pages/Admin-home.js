@@ -8,7 +8,7 @@ import StaffForm from '../components/Admin/Staff/StaffForm';
 
 const HomeAdmin = () => {
 
-  const path = 'http://localhost:3000';
+  const path = 'http://64.227.101.60:4000';
   const [showPage, setShowPage] = useState(false);
 
   useEffect(async function () {

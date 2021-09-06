@@ -5,7 +5,7 @@ import events_array from '../../../scripts/admin/deparment_events';
 
 const FormMap = () => {
 
-  const path = 'http://localhost:3000';
+  const path = 'http://64.227.101.60:4000';
   const history = useHistory();
   //formUpload permite manipular la visualización del formulario de eliminar o subir
   const [formUpload, setFormUpload] = useState(true);
@@ -132,7 +132,7 @@ const FormMap = () => {
     }
     /* asignamos los eventos a sus estados respectivos, igualmente, asignamos un evento por defecto 
     que se visualizará seleccionado en el formulario de eliminar eventos */
-    if(departmentWithEvents.length>0){
+    if (departmentWithEvents.length > 0) {
       let initialEvents = [];
       const index = events_array.findIndex(value => value.department_id === departmentWithEvents[0].department_id);
       //optenemos los eventos del primer departamento con información en event

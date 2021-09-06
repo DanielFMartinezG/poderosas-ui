@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom';
 
 const StaffForm = () => {
 
-  const path = 'http://localhost:3000';
+  const path = 'http://64.227.101.60:4000';
   //utilizamos imgText para mostrar el nombre de la imagen que se está subiendo al formulario 
   const history = useHistory();
   const [imgText, setImgText] = useState('sube una imagen');

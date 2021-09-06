@@ -5,7 +5,7 @@ import podImg from '../../../assets/img-logos/equipo-poderoso.png';
 
 const LoginAdmin = () => {
 
-  const path = 'http://localhost:3000';
+  const path = 'http://64.227.101.60:4000';
   const emailRef = useRef();
   const passwordRef = useRef();
   const history = useHistory();
@@ -29,13 +29,13 @@ const LoginAdmin = () => {
     const responseJson = await response.json();
 
     //almacenamos el token en el Storage y redireccionamos al home
-    if(responseJson.msq === 'Inicio correcto'){
+    if (responseJson.msq === 'Inicio correcto') {
       localStorage.setItem('admin', responseJson.token)
       history.push('./home');
-    }else{
+    } else {
       alert('Correo o contraseña invalidos.');
     }
-    
+
   }
 
   return (

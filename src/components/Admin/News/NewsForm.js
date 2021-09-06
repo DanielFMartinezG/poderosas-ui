@@ -5,7 +5,7 @@ import saveImg from '../../../scripts/admin/save_img_firebase';
 
 const NewsForm = () => {
 
-  const path = 'http://localhost:3000';
+  const path = 'http://64.227.101.60:4000';
   //utilizamos imgText para mostrar el nombre de la imagen que se está subiendo al formulario 
   const [imgText, setImgText] = useState('sube una imagen');
   const [formUpload, serFormUpload] = useState(true);
@@ -99,7 +99,7 @@ const NewsForm = () => {
    * almacenada en la base de datos
    * @param event objeto tipo evento
    */
-  async function sendDeleteRequere (event){
+  async function sendDeleteRequere(event) {
     event.preventDefault();
     const token = localStorage.getItem('admin');
     let dropdown = dropdownNewRef.current;
