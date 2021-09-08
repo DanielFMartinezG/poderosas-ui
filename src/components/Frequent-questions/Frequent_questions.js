@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import getQuestions from '../../scripts/frequent-questions/get_questions';
+import GetQuestiosnAbout from '../../scripts/frequent-questions/get_questions_about';
 import '../../styles/frequent_questions.css';
 import QuestionCard from './Question_card';
-import { getQuestions, GetQuestiosnAbout } from '../../scripts/frequent-questions/get_questions'
 
 const FrequentQuestions = () => {
 

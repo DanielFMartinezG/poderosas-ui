@@ -8,11 +8,4 @@ async function getQuestions() {
   return questions.resultado;
 }
 
-//función encargada de traer las preguntas sobre poderosas
-async function GetQuestiosnAbout() {
-  const response = await fetch(`${routh}/frequentQuestions/getQuestionsAbout`);
-  const questions = await response.json();
-  return questions.resultado;
-}
-
-module.exports = { getQuestions, GetQuestiosnAbout };
+export default getQuestions;
